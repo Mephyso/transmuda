@@ -1,7 +1,7 @@
-package com.vyTrack.step_definitions;
+package com.transmuda.step_definitions;
 
-import com.vyTrack.pages.LoginPage;
-import com.vyTrack.utilities.ConfigurationReader;
+import com.transmuda.pages.LoginPage;
+import com.transmuda.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {
 
