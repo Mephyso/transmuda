@@ -1,10 +1,10 @@
-package com.project_name.pages;
+package com.vyTrack.pages;
 
 
 
 
-import com.project_name.utilities.BrowserUtils;
-import com.project_name.utilities.Driver;
+import com.vyTrack.utilities.BrowserUtils;
+import com.vyTrack.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;

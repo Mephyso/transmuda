@@ -1,7 +1,7 @@
-package com.project_name.pages;
+package com.vyTrack.pages;
 
 
-import com.fleet.utilities.Driver;
+import com.vyTrack.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
