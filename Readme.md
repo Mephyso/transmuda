@@ -1,42 +1,31 @@
-# Template Automation Framework For Project Implementation
 
--  Team Lead and members clone that project
--  Then team will create their own project by using that template which has all folder structure and dependencies 
-   are needed
-
-
-# While project creation:
-
-     1. Team will use own project name for
-    package name
   
-![](template-files/package_name.png)
+![](template-files/FleetManagement.png)
 
-    2. Copy runners package and paste under project package     
-
-
-    3. Change CukesRunner glue key
-
-![](template-files/cukes_glue.png)
-
-    4. Change FailedTestRunner glue
-
-![](template-files/failed_glue.png)
+  
+![](template-files/WhatIsFleetManagement.png)
 
 
-     5. Copy features directory paste in your resources directory
- 
-     6. Copy step_definitions packege and paste under your project package
+   *	The domain is the logistics sector. The region covers all of the US states and also includes Canada.
 
-     7. Copy pages package and paste under your project package
+   *	Transmuda online fleet management solution that is highly specialized for companies that handle large vehicle fleets.
 
-     8. Copy utilities package and paste under your project package
+   *	It is a web-based application for customers to handle all kinds of management of logistics.
+
+   *	Including, but not limited to, managing and tracking deliveries of the vehicles as well as renting for business use.
+
+   *	It enables the business user to replace the vehicles and track all insurance and registration-related issues. 
+
+   *	There are some other features that make the application unique, like Damage and Vehicle Maintenance
+
+   *	The project users are drivers, managers, and sales managers. 
+
+   *	The Fleet Module is for handling contract management and CRUD operations which means creating, reading, updating, and delete of all kinds of Vehicle information including odometer, fuel cost, and reporting any damage cost
+
+   *	The objective is to verify that the functionality of the application works according to the requirements
+
+![](template-files/FleetManagementProject.png)
 
 
-# *** IMPORTANT *** 
-
- - Fix your each class import statements
-
-
-![](template-files/fix_import.png)
+![](template-files/ScrumTeam.png)
 
