@@ -2,9 +2,8 @@ package com.transmuda.step_definitions;
 
 import com.transmuda.pages.LoginPage;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 
-public class US05_StepDefs {
+public class US5_StepDefs {
 
     LoginPage loginPage = new LoginPage();
 
