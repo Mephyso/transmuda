@@ -26,3 +26,6 @@ Feature: Users should view columns on the Vehicle models page
       | user          |
       | sales manager |
       | store manager |
+
+
+  Scenario: US05 AC01 TC02 Verify that

@@ -20,7 +20,7 @@ public class US5_StepDefs {
     VehiclesModelPage vehiclesModelPage = new VehiclesModelPage();
     @Then("the user clicks the Vehicle Model under the Fleet")
     public void the_user_clicks_the_vehicle_model_under_the_fleet() {
-        BrowserUtils.hover(Driver.getDriver().findElement(By.xpath("//span[@class='title title-level-1'][normalize-space()='Fleet']")));
+        BrowserUtils.hover(dashboardPage.fleetModule);
         BrowserUtils.sleep(5);
         dashboardPage.vehiclesModel.click();
         BrowserUtils.sleep(5);
