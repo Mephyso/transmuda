@@ -7,6 +7,6 @@ import java.util.List;
 
 public class VehiclesModelPage extends BasePage {
 
-    @FindBy(className = "grid-header-cell__label")
+    @FindBy(css = ".grid-header-cell__label")
     public List<WebElement> allVehiclesModelTableHeaders;
 }

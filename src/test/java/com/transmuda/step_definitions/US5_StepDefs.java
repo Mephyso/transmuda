@@ -30,6 +30,11 @@ public class US5_StepDefs {
     @Then("the user verifies managers see below columns in the web-table")
     public void the_user_verifies_managers_see_below_columns_in_the_web_table(List<String> expectedTitles) {
 
+        List<String> actualTitles = BrowserUtils.getElementsText(vehiclesModelPage.allVehiclesModelTableHeaders);
+
+        Assert.assertEquals(expectedTitles,actualTitles);
+
+        /*
         List<String> actualTitles = new ArrayList<>();
         System.out.println("expectedTitles = " + expectedTitles);
         System.out.println("vehiclesModelPage = " + vehiclesModelPage.allVehiclesModelTableHeaders);
@@ -39,7 +44,7 @@ public class US5_StepDefs {
         }
         System.out.println("actualTitles = " + actualTitles);
         Assert.assertEquals(expectedTitles,actualTitles);
-
+         */
     }
 
     @Then("the user verify that the drivers see the error message {string}")
