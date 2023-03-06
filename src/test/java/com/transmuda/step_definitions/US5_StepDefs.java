@@ -9,6 +9,7 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.Browser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,4 +42,10 @@ public class US5_StepDefs {
 
     }
 
+    @Then("the user verify that the drivers see the error message {string}")
+    public void the_User_Verify_That_The_Drivers_See_The_Error_Message(String expectedTitle) {
+        String actualTitle = dashboardPage.errorMessage.getText();
+
+        Assert.assertEquals(expectedTitle, actualTitle);
+    }
 }
