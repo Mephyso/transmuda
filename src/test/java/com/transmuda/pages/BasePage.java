@@ -19,6 +19,9 @@ import java.util.List;
 
 public abstract class BasePage {
 
+    @FindBy(xpath = "//div[normalize-space()='You do not have permission to perform this action.']")
+    public WebElement errorMessage;
+
     @FindBy(xpath = "//span[normalize-space()='Vehicles Model']")
     public WebElement vehiclesModel;
 
