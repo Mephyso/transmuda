@@ -41,6 +41,8 @@ public class US6_StepDefs {
         Assert.assertTrue(fleetVehiclePages.EditButton.isDisplayed());
         BrowserUtils.sleep(1);
         Assert.assertTrue( fleetVehiclePages.DeleteButton.isDisplayed());
+
+        System.out.println("is displayed");
     }
     }
 
