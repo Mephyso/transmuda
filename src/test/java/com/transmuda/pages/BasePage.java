@@ -1,8 +1,5 @@
 package com.transmuda.pages;
 
-
-
-
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.Driver;
 import org.openqa.selenium.By;
@@ -132,6 +129,9 @@ public abstract class BasePage {
 
     @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='System']")
     public WebElement systemModule;
+
+    @FindBy(xpath = "//span[@class='title title-level-2'][contains(.,'Calendar Events')]")
+    public WebElement calenderEvent;
 
 
 }
