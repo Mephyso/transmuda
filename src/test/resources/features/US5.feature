@@ -29,7 +29,7 @@ Feature: Users should view columns on the Vehicle models page
       #| store manager |
 
   @kutay
-  Scenario: US05 AC01 TC02 Verify that drivers should not able to access the Vehicle Model page,
+  Scenario: US05 AC02 TC02 Verify that drivers should not able to access the Vehicle Model page,
   users should see “You do not have permission to perform this action.”
     Given the user logged in as "driver"
     Then the user clicks the Vehicle Model under the Fleet
