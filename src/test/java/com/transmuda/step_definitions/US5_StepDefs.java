@@ -38,12 +38,11 @@ public class US5_StepDefs {
         */
 
         List<String> actualTitles = new ArrayList<>();
-        System.out.println("expectedTitles = " + expectedTitles);
-        System.out.println("vehiclesModelPage = " + vehiclesModelPage.allVehiclesModelTableHeaders);
+
         for (WebElement each : vehiclesModelPage.allVehiclesModelTableHeaders) {
-            System.out.println("each = " + each.getText());
             actualTitles.add(each.getText());
         }
+        System.out.println("expectedTitles = " + expectedTitles);
         System.out.println("actualTitles = " + actualTitles);
         Assert.assertEquals(expectedTitles,actualTitles);
 

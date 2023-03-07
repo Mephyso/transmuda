@@ -6,7 +6,7 @@ Feature: Users should view columns on the Vehicle models page
     Given the user is on the login page
 
   @B28G51-189
-  Scenario: US5 AC1 TC1 Verify that store manager and sales manager should see 10 columns on the Vehicle Model page
+  Scenario Outline: US5 AC1 TC1 Verify that store manager and sales manager should see 10 columns on the Vehicle Model page
   Expected Column names: MODEL NAME, MAKE, CAN BE REQUESTED, CVVI, CO2 FEE (/MONTH), COST (DEPRECIATED),
   TOTAL COST (DEPRECIATED), CO2 EMISSIONS, FUEL TYPE, VENDORS
 
