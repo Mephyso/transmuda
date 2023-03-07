@@ -25,8 +25,6 @@ public abstract class BasePage {
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
 
-
-
     @FindBy(xpath = "(//div[@class='loader-frame'])[last()]")
     protected WebElement loaderMask;
 
@@ -131,7 +129,9 @@ public abstract class BasePage {
 
     @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='System']")
     public WebElement systemModule;
+
     @FindBy(xpath = "//span[@class='title title-level-2'][contains(.,'Calendar Events')]")
     public WebElement calenderEvent;
+
 
 }
