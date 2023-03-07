@@ -24,7 +24,6 @@ Feature: Users should view columns on the Vehicle models page
       | FUEL TYPE                |
       | VENDORS                  |
 
-
     Examples:
       | user          |
       | sales manager |
