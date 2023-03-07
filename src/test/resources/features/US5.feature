@@ -26,7 +26,7 @@ Feature: Users should view columns on the Vehicle models page
     Examples:
       | user          |
       | sales manager |
-      #| store manager |
+      | store manager |
 
   @kutay
   Scenario: US5 AC2 TC2 Verify that drivers should not able to access the Vehicle Model page,
