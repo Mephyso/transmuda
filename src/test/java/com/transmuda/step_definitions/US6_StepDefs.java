@@ -21,6 +21,7 @@ public class US6_StepDefs {
     @Given("Click the Vehicles under the Fleet")
     public void click_the_vehicles_under_the_fleet() {
 
+        BrowserUtils.sleep(1);
         BrowserUtils.hover(Driver.getDriver().findElement(By.xpath("//span[@class='title title-level-1'][normalize-space()='Fleet']")));
         BrowserUtils.sleep(5);
         fleetVehiclePages.vehicleButton.click();
@@ -30,6 +31,7 @@ public class US6_StepDefs {
     }
     @Then("user should see any car info has three dots “...”, and there are “view, edit, delete” icons.")
     public void userShouldSeeAnyCarInfoHasThreeDotsAndThereAreViewEditDeleteIcons( ) {
+
         BrowserUtils.hover(Driver.getDriver().findElement(By.xpath("/html[1]/body[1]/div[2]/div[2]/div[1]/div[2]/div[3]/div[3]/div[2]/div[2]/div[2]/div[1]/table[1]/tbody[1]/tr[1]/td[21]/div[1]/div[1]/a[1]")));
 
 
