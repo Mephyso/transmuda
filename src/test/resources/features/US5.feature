@@ -1,9 +1,11 @@
+@B28G51-191
 Feature: Users should view columns on the Vehicle models page
 
   Background: User is already in the log in page
+    #@B28G51-188
     Given the user is on the login page
 
-  @kutay
+  @B28G51-189
   Scenario: US5 AC1 TC1 Verify that store manager and sales manager should see 10 columns on the Vehicle Model page
   Expected Column names: MODEL NAME, MAKE, CAN BE REQUESTED, CVVI, CO2 FEE (/MONTH), COST (DEPRECIATED),
   TOTAL COST (DEPRECIATED), CO2 EMISSIONS, FUEL TYPE, VENDORS
@@ -28,7 +30,7 @@ Feature: Users should view columns on the Vehicle models page
       | sales manager |
       | store manager |
 
-  @kutay
+  @B28G51-190
   Scenario: US5 AC2 TC2 Verify that drivers should not able to access the Vehicle Model page,
   users should see “You do not have permission to perform this action.”
     Given the user logged in as "driver"
