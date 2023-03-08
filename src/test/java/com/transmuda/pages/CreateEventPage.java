@@ -27,6 +27,12 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//*[text() = 'This value should not be blank.']")
     public WebElement spanThisValueShouldNot;
 
+    @FindBy(xpath = "//*[text()='The value have not to be more than 99.']")
+    public WebElement errorMessage99;
+
+    @FindBy(xpath = "//span[contains(text(),'The value have not to be less than 1.')]")
+    public WebElement errorMessage1;
+
     @FindBy(css = "span[style='top: 361px; left: 182px;'] span")
     public WebElement spanThisValueShouldNot2;
 
@@ -84,5 +90,14 @@ public class CreateEventPage extends BasePage{
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)), 5);
         }
+
     }
+
+    @FindBy(xpath ="//*[text() = 'The value have not to be less than 1.']")
+    public WebElement lessThan1Message;
+
+    @FindBy(xpath ="//*[text() = 'The value have not to be more than 99.']")
+    public WebElement moreThan99Message;
+
+
 }
