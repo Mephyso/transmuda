@@ -13,7 +13,7 @@ Given the user logged in with username as "User1" and password as "UserUser123"
 
 
 
-  Scenario:  US9AC2TC2 users should see the error message when the entered number less than 1
+  Scenario:  US9AC2TC2 users should see the error message when the entered number more than 99
     Given    User are on the homepage
     When     Click the "Calendar Events" under the "Activities"
     And      Click the “Create Calendar Event” button
