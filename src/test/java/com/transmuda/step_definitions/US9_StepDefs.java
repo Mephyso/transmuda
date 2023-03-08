@@ -20,7 +20,6 @@ public class US9_StepDefs {
 
     CreateEventPage createEventPage = new CreateEventPage();
 
-
     @And("See error messages when entering {int} verify the app displays {string}")
     public void seeErrorMessagesWhenEnteringVerifyTheAppDisplays(int num, String message) {
         createEventPage.inputInterval.clear();
@@ -29,8 +28,6 @@ public class US9_StepDefs {
         if (num<1){Assert.assertEquals(message, createEventPage.lessThan1Message.getText());}
         if (num>99){Assert.assertEquals(message, createEventPage.moreThan99Message.getText());}
     }
-
-
 
     @When("Click the {string} under the {string}")
     public void clickTheCalendarEventsUnderThe(String module, String tab) {
