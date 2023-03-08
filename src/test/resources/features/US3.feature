@@ -1,39 +1,29 @@
-Feature: Manage filters on the Vehicle Costs page
+Feature: Users learn how to use the pinbar
 
   Background: User is on the login page
     Given the user is on the login page
 
+  Scenario Outline: US3AC1TC1 Verify user can see messages
 
-  Scenario: US13AC1TC1 Verify user can see 3 columns on the Vehicle Model page as "sales manager"
-  Expected Column names: TYPE, TOTAL PRICE, DATE
+    Then the user logged in as "<user>"
+    And the user click on the Learn how to use this space message
+    Then Verify user can see these messages "How To Use Pinbar" and "Use pin icon on the right top corner of page to create fast access link in the pinbar."
 
-    Given the user logged in as "sales manager"
-    And the user click on the Vehicle Costs under the Fleet
-    Then the user should see following titles in the table
-      | TYPE        |
-      | TOTAL PRICE |
-      | DATE        |
+    Examples:
+      | user          |
+      | sales manager |
+      | store manager |
+      | driver        |
 
-  Scenario: US13AC1TC2 Verify user can see 3 columns on the Vehicle Model page as "store manager"
-  Expected Column names: TYPE, TOTAL PRICE, DATE
 
-    Given the user logged in as "store manager"
-    And the user click on the Vehicle Costs under the Fleet
-    Then the user should see following titles in the table
-      | TYPE        |
-      | TOTAL PRICE |
-      | DATE        |
+  Scenario Outline: US3AC2TC1 Verify users see an image (Automation testing - verify image source)
 
-  Scenario: US13AC2TC1 Verify user can check the first checkbox to check all the Vehicle Costs as "sales manager"
+    Then the user logged in as "<user>"
+    And the user click on the Learn how to use this space message
+    Then the user should see an example image
 
-    Given the user logged in as "sales manager"
-    And the user click on the Vehicle Costs under the Fleet
-    And the user click the first checkbox
-    Then the user should see all the vehicle costs are checked
-
-  Scenario: US13AC2TC2 Verify user can check the first checkbox to check all the Vehicle Costs  as "store manager"
-
-    Given the user logged in as "store manager"
-    And the user click on the Vehicle Costs under the Fleet
-    And the user click the first checkbox
-    Then the user should see all the vehicle costs are checked
+    Examples:
+      | user          |
+      | sales manager |
+      | store manager |
+      | driver        |
