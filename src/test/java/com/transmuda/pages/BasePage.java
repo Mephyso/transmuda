@@ -1,8 +1,5 @@
 package com.transmuda.pages;
 
-
-
-
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.Driver;
 import org.openqa.selenium.By;
@@ -18,6 +15,12 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class BasePage {
+
+    @FindBy(xpath = "//div[normalize-space()='You do not have permission to perform this action.']")
+    public WebElement errorMessage;
+
+    @FindBy(xpath = "//span[normalize-space()='Vehicles Model']")
+    public WebElement vehiclesModel;
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -102,6 +105,33 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//i[@title='Get help']")
     public WebElement questionIcon;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='Fleet']")
+    public WebElement fleetModule;
+
+    @FindBy (xpath ="//a[@href='/entity/Extend_Entity_VehicleCosts']/span")
+    public WebElement fleetModuleVehicleCosts;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='Customers']")
+    public WebElement customersModule;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='Sales']")
+    public WebElement salesModule;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='Activities']")
+    public WebElement activitiesModule;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='Marketing']")
+    public WebElement marketingModule;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='Reports & Segments']")
+    public WebElement reportAndSegmentsModule;
+
+    @FindBy (xpath = "//span[@class='title title-level-1'][normalize-space()='System']")
+    public WebElement systemModule;
+
+    @FindBy(xpath = "//span[@class='title title-level-2'][contains(.,'Calendar Events')]")
+    public WebElement calenderEvent;
 
 
 }
