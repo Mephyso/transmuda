@@ -99,5 +99,7 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath ="//*[text() = 'The value have not to be more than 99.']")
     public WebElement moreThan99Message;
 
+    @FindBy(xpath = "//input[@data-name='recurrence-repeat']")
+    public  WebElement repeatCheckBox;
 
 }
