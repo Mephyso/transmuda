@@ -73,6 +73,8 @@ public abstract class BasePage {
     }
 
 
+    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[1]/div/div/ul/li[4]/a" )
+    public WebElement fleetModuleVehicleOdometer;
 
     /**
      * This method will navigate user to the specific module in vytrack application.
@@ -133,5 +135,9 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[@class='title title-level-2'][contains(.,'Calendar Events')]")
     public WebElement calenderEvent;
 
+    @FindBy (xpath="//a[.='Learn how to use this space']")
+    public WebElement pinbarHelpButton;
 
+    @FindBy(xpath = "//*[@id=\"main-menu\"]/ul/li[2]/div/div/ul/li[4]/a/span")
+    public WebElement VehicleOdometerSalesManager;
 }
