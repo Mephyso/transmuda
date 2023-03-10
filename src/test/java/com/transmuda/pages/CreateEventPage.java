@@ -44,7 +44,7 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//*[text() = 'Calendar Events']")
     public WebElement h1CalendarEvents;
 
-    @FindBy(css = "a[class*='btn-primary']")
+    @FindBy(xpath = "//a[@title='Create Calendar event']")
     public WebElement linkCreateCalendarEvent;
     @FindBy(id = "recurrence-repeat-view1103")
     public WebElement btn_repeat;
@@ -102,9 +102,9 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//input[@data-name='recurrence-repeat']")
     public  WebElement repeatCheckBox;
 
-    @FindBy(xpath = "//body/p")
+    @FindBy(xpath = "//body")
     public  WebElement descriptionBox;
 
-    @FindBy (xpath = "//button[@class='btn btn-success action-button']")
-    public  WebElement saveAndClose;
+    @FindBy (xpath = "//body/p")
+    public  WebElement descriptionBoxText;
 }
