@@ -23,49 +23,23 @@ import java.time.Duration;
 import java.util.List;
 public class US10_StepDefs {
 
-    DashboardPage dashboardPage = new DashboardPage();
-        CreateEventPage createEventPage=new CreateEventPage();
-        @Given("the user logged in as Activities")
-        public void the_user_logged_in_as_Activities() {
-            dashboardPage.waitUntilLoaderScreenDisappear();
-            createEventPage.spanActivities.click();
-            BrowserUtils.clickWithJS(dashboardPage.activitiesModule);
-            BrowserUtils.clickWithJS(dashboardPage.calenderEvent);
-            BrowserUtils.sleep(5);
+    CreateEventPage createEventPage=new CreateEventPage();
+    private String expectedText ="This is an example text for our test case.";
 
-        }
+    @And("writes a note to the description")
+    public void writesANoteToTheDescription() {
+    createEventPage.descriptionBox.sendKeys(expectedText);
+    }
 
-        @When("the user navigates to Activities,Calendar Events")
-        public void theUserNavigatesToModule(String tab, String module) {
-            createEventPage.waitUntilLoaderScreenDisappear();
-            createEventPage.navigateToModule(tab, module);
-            createEventPage.waitUntilLoaderScreenDisappear();
+    @Then("User saves the typed note with Save and Close")
+    public void User_saves_the_typed_note_with_Save_and_Close(){
+        BrowserUtils.clickWithJS(createEventPage.saveAndClose);
+        BrowserUtils.sleep(5);
+        String actualText = createEventPage.descriptionBox.getText();
+        System.out.println("actualText = " + actualText);
+        System.out.println("expectedText = " + expectedText);
+        Assert.assertEquals(expectedText,actualText);
+    }
 
-        }
 
-        @And("Click the “Calendar Events” under the Activities")
-        public void click_the_calendar_events_under_the_activities() {
-            Actions actions = new Actions(Driver.getDriver());
-            List<WebElement> menuOptions = createEventPage.menuOptions;
-            for (WebElement each_menu : menuOptions) {
-                actions.moveToElement(each_menu).perform();
-                BrowserUtils.sleep(1);
-
-            }
-
-        }
-        @And("Click the “Create Calendar Event” button")
-        public void click_the_create_calendar_event_button() {
-            BrowserUtils.clickWithJS(createEventPage.linkCreateCalendarEvent);
-            BrowserUtils.sleep(3);
-            System.out.println("Click the “Create Calendar Event” button");
-        }
-        @Then("User saves the typed note with Save and Close")
-                public void User_saves_the_typed_note_with_Save_and_Close(){
-                BrowserUtils.clickWithJS(createEventPage.linkCreateCalendarEvent);
-                BrowserUtils.sleep(3);
-            System.out.println("User saves the typed note with Save and Close");
-
-            }
-
-        }
+}
