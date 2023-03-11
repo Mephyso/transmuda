@@ -22,5 +22,10 @@ public class FleetVehiclePages extends BasePage{
     @FindBy(xpath = "(//a[@title= 'View'])[1]")
     public  WebElement ViewButton;
 
+    @FindBy(xpath = "//button[@data-toggle='dropdown']/input[@type='checkbox']")
+    public WebElement firstCheckBox;
+
+    @FindBy(xpath = "//input[@tabindex='-1']")
+    public List<WebElement> allCheckBoxes;
 
 }
