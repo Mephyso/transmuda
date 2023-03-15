@@ -27,6 +27,12 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//*[text() = 'This value should not be blank.']")
     public WebElement spanThisValueShouldNot;
 
+    @FindBy(xpath = "//*[text()='The value have not to be more than 99.']")
+    public WebElement errorMessage99;
+
+    @FindBy(xpath = "//span[contains(text(),'The value have not to be less than 1.')]")
+    public WebElement errorMessage1;
+
     @FindBy(css = "span[style='top: 361px; left: 182px;'] span")
     public WebElement spanThisValueShouldNot2;
 
@@ -38,7 +44,7 @@ public class CreateEventPage extends BasePage{
     @FindBy(xpath = "//*[text() = 'Calendar Events']")
     public WebElement h1CalendarEvents;
 
-    @FindBy(css = "a[class*='btn-primary']")
+    @FindBy(xpath = "//a[@title='Create Calendar event']")
     public WebElement linkCreateCalendarEvent;
     @FindBy(id = "recurrence-repeat-view1103")
     public WebElement btn_repeat;
@@ -84,5 +90,21 @@ public class CreateEventPage extends BasePage{
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
             BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)), 5);
         }
+
     }
+
+    @FindBy(xpath ="//*[text() = 'The value have not to be less than 1.']")
+    public WebElement lessThan1Message;
+
+    @FindBy(xpath ="//*[text() = 'The value have not to be more than 99.']")
+    public WebElement moreThan99Message;
+
+    @FindBy(xpath = "//input[@data-name='recurrence-repeat']")
+    public  WebElement repeatCheckBox;
+
+    @FindBy(xpath = "//body")
+    public  WebElement descriptionBox;
+
+    @FindBy (xpath = "//body/p")
+    public  WebElement descriptionBoxText;
 }
